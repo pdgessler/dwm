@@ -21,13 +21,16 @@ md5sums=(
 )
 
 pkgver() {
+    cd "$_gitname"
     printf '%d.%s\n' "$(date -u -d "@$(git log -1 --format="%ct")" +%Y%m%d%H%M%S)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
+    cd "$_gitname"
     make
 }
 
 package() {
+    cd "$_gitname"
     make PREFIX=/usr DESTDIR="$pkgdir" install
 }
