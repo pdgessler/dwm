@@ -2,7 +2,7 @@
 
 pkgname=dwm-pdgessler
 _gitname=dwm
-pkgver=20140812064552.74ffb3e
+pkgver=20140815015413.36c8b10
 pkgrel=1
 pkgdesc="A dynamic window manager for X - pdgessler personalizations"
 license=( "MIT" )
